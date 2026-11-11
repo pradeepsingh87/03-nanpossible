@@ -1148,6 +1148,11 @@ html.cursor-large * {
   outline-offset: 2px;
 }
 
+.newsletter-field,
+.newsletter-button {
+  min-height: 44px;
+}
+
 .field-static {
   font-size: 1rem;
   font-weight: 700;
