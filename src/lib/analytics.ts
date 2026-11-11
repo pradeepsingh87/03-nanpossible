@@ -166,7 +166,8 @@ export type FormName =
   | "partner_application"
   | "success_story"
   | "better_world_application"
-  | "award_nomination";
+  | "award_nomination"
+  | "newsletter";
 
 export type CheckoutType = "payment" | "donation";
 

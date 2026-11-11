@@ -41,7 +41,7 @@ GA4 recommended events are used wherever one fits so the standard reports light 
 
 | Event | Fires when | Key params |
 | --- | --- | --- |
-| `generate_lead` ★ | Contact, affiliate inquiry, partner application, success story, Better World application, or award nomination saved | `form_name`, `form_topic` (contact topic / industry / award category / org type), `form_variant` (nomination type, org type, affiliate type) |
+| `generate_lead` ★ | Contact, affiliate inquiry, partner application, success story, Better World application, award nomination, or newsletter sign-up (`form_name: newsletter`, `form_topic` = placement such as `home`/`footer`/`resources`; the email is never sent) saved | `form_name`, `form_topic` (contact topic / industry / award category / org type), `form_variant` (nomination type, org type, affiliate type) |
 | `form_error` | A form submit returned an error or threw | `form_name`, `error_message` |
 | `sign_up` ★ | Public visitor registered (`/login?notice=registration-success\|confirm-email`) | `method` |
 | `sign_up_error` | Registration redirected back with an error | `error_code` |

@@ -250,6 +250,26 @@ describe("form outcomes", () => {
   });
 });
 
+describe("newsletter form outcome", () => {
+  it("fires generate_lead on success and form_error on failure without the email", () => {
+    expect(
+      formOutcomeEvent("newsletter", { success: true }, { form_topic: "footer" }),
+    ).toEqual({
+      name: "generate_lead",
+      params: { form_name: "newsletter", form_topic: "footer" },
+    });
+    expect(
+      formOutcomeEvent("newsletter", { error: "Please enter a valid email address." }),
+    ).toEqual({
+      name: "form_error",
+      params: {
+        form_name: "newsletter",
+        error_message: "Please enter a valid email address.",
+      },
+    });
+  });
+});
+
 describe("client runtime", () => {
   afterEach(() => {
     vi.unstubAllGlobals();
